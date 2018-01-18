@@ -5,18 +5,23 @@ import {
   Text,
   View
 } from 'react-native';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import reducers from './src/reducers';
 
 export default class App extends Component<{}> {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to Mega Manager
-        </Text>
-        <Text style={styles.instructions}>
-          Brandon Ikeda
-        </Text>
-      </View>
+      <Provider store={createStore(reducers)}>
+        <View style={styles.container}>
+          <Text style={styles.welcome}>
+            Welcome to Mega Manager
+          </Text>
+          <Text style={styles.instructions}>
+            Brandon Ikeda
+          </Text>
+        </View>
+      </Provider>
     );
   }
 }
