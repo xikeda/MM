@@ -15,7 +15,7 @@ export default class App extends Component<{}> {
       <Provider store={createStore(reducers)}>
         <View style={styles.container}>
           <Text style={styles.welcome}>
-            Welcome to Mega Manager
+            Added firebase
           </Text>
           <Text style={styles.instructions}>
             Brandon Ikeda
