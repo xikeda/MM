@@ -34,10 +34,10 @@ class LoginForm extends Component {
     if(this.props.loading){
       return <Spinner size="large" />;
     }
-    
+
     return(
       <Button onPress={this.onButtonPress.bind(this)}>
-      Login
+        Login
       </Button>
     );
   }
@@ -62,7 +62,9 @@ class LoginForm extends Component {
             value={this.props.password}
           />
         </CardSection>
-          {this.renderError()}
+        <Text style={styles.errorTextStyle}>
+          {this.props.error}
+        </Text>
         <CardSection>
           {this.renderButton()}
         </CardSection>
@@ -79,13 +81,9 @@ const styles = {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    email: state.auth.email,
-    password: state.auth.password,
-    error: state.auth.error,
-    loading: state.auth.loading
-  };
+const mapStateToProps = ({auth}) => {
+  const {email,password,error,loading} = auth;
+  return {email, password, error, loading};
 };
 
 export default connect(mapStateToProps, {
