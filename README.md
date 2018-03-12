@@ -3,7 +3,8 @@ Mega Manager - A mobile application written in React Native, with Redux, Flexbox
 
 
 Download repo, using RN CLI cd into directory and run:
-"react-native run-ios" or "react-native run-android" if you have Java/ Android SDK installed
+1. "npm install"
+2. "react-native run-ios" OR "react-native run-android" if you have Java/ Android SDK installed
 
 Simulator will open, naviagate to application
 
